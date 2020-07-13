@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/track-page.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        function initMap() {
+            var geocoder = new google.maps.Geocoder();
+            var uluru = {lat: 55.7498598, lng: 37.352323};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+
+            geocoder.geocode( { 'address': '{{ destination }}' }, function (results, status) {
+                if (status == 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    document.getElementById('map').style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="t-section">
+        <div class="t-container">
+            <div class="t-content">
+                <div class="t-location">
+                    <div class="t-location-box">
+                        <div class="t-location-date">
+                            <h3 class="t-location-title">Примерная дата доставки</h3>
+                            <span class="t-location-date__number">30 сентября 2020</span>
+                        </div>
+                        <div class="t-location-status">
+                            <div class="t-status">
+                                <h3 class="t-location-title">Статус заказа</h3>
+                                <span class="t-location-status__time">Обновлен 9 часов назад</span>
+                            </div>
+                            <div class="t-track">
+                                <div class="t-track__number">
+                                    <span class="t-location-name t-track_width">Трек номер</span>
+                                    <span class="t-location-description">1400 7334 0031 99</span>
+                                </div>
+                                <div class="t-track__order">
+                                    <span class="t-location-name t-track_width">Номер заказа</span>
+                                    <span class="t-location-description">5326 5868</span>
+                                </div>
+                            </div>
+                            <div class="t-level">
+                                <div class="t-level-line">
+                                    <img class="" src="./images/line-large.png" alt="">
+                                    <!-- Менять в зависимости от статуса -->
+<!--                                    <img class="" src="./images/line-status-1.png" alt="">-->
+<!--                                    <img class="" src="./images/line-status-2.png" alt="">-->
+<!--                                    <img class="" src="./images/line-status-3.png" alt="">-->
+<!--                                    <img class="" src="./images/line-status-4.png" alt="">-->
+                                </div>
+                                <div class="t-level-box">
+                                    <div class="t-level-box__item">
+                                        <span class="t-level__heading">Посылка отправлена</span>
+                                        <span class="t-level__description">21 июня 2020</span>
+                                    </div>
+                                    <div class="t-level-box__item">
+                                        <span class="t-level__heading">В пути</span>
+                                        <span class="t-level__description">с 22 июня 2020</span>
+                                    </div>
+                                    <div class="t-level-box__item">
+                                        <span class="t-level__heading">Статус не определен</span>
+                                        <span class="t-level__description">Статус не обновлялся более 15 дней. Возможно, посылка в месте получения</span>
+                                    </div>
+                                    <!-- класс t-color для неактивных пунктов -->
+                                    <div class="t-level-box__item t-color">
+                                        <span class="t-level__heading">В месте получения</span>
+                                        <span class="t-level__description">Примерная дата 30 июня 2020</span>
+                                    </div>
+                                    <div class="t-level-box__item t-color">
+                                        <span class="t-level__heading">Вручена</span>
+                                        <!-- Поле появляется, если статус "Вручена" активен -->
+<!--                                        <span class="t-level__description">2 июля 2020</span>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="t-notification t-location_indent">
+                                <h3 class="t-location-title">Подписаться на уведомления</h3>
+                                <span class="t-notification-name t-location-name">Отправим сообщение, когда статус заказа изменится.</span>
+                                <form action="" class="t-notification__form">
+                                    <input type="text" class="t-notification__input" placeholder="Электронная почта">
+                                    <input type="button" class="t-location-btn t-notification__btn" value="Подписаться">
+                                </form>
+                                <div class="t-notification__text">
+                                <span class="t-notification-name">Оформляя подписку, высоглашаетесь с <a href="#">правилами сервиса</a> и <a
+                                        href="#">обработки персональных данных.</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="t-details">
+                    <div class="t-order">
+                        <h3 class="t-location-title">Подробности заказа</h3>
+                        <div class="t-order__sender">
+                            <span class="t-location-name t-track_width">Отправитель</span>
+                            <span class="t-location-description">ShopToDrop</span>
+                        </div>
+                        <div class="t-order__sent">
+                            <span class="t-location-name t-track_width">Что отправлено</span>
+                            <span class="t-location-description">Маленький пакет</span>
+                        </div>
+                        <div class="t-order__sent">
+                            <span class="t-location-name t-track_width">Вес посылки</span>
+                            <span class="t-location-description">0,159 кг</span>
+                        </div>
+                        <div class="t-order__sent">
+                            <span class="t-location-name t-track_width">К оплате</span>
+                            <span class="t-location-description">1 530 ₽</span>
+                        </div>
+                        <div class="t-order__quest">
+                            <span class="t-location-name">Остались вопросы о заказе?</span> <br>
+                            <span class="t-location-description">Оператор уточнит информацию и предоставит контакты магазина.</span>
+                            <a href="#" class="t-location-btn t-order__btn">Связаться с магазином</a>
+                        </div>
+                    </div>
+                    <div class="t-receipt t-location_indent">
+                        <h3 class="t-location-title">Как получить</h3>
+                        <div class="t-receipt__info">
+                            <div class="t-receipt__column">
+                                <img src="images/icon-passport.png" alt="">
+                                <span class="t-receipt__text">Возьмите <br> паспорт</span>
+                            </div>
+                            <div class="t-receipt__column">
+                                <img src="images/icon-notice.png" alt="">
+                                <span class="t-receipt__text t-receipt_left"><a href="#">Распечатайте</a><br>извещение</span>
+                            </div>
+                            <div class="t-receipt__column">
+                                <img src="images/icon-package.png" alt="">
+                                <span class="t-receipt__text">Оплатите <br> посылку</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-place t-location_indent">
+                        <h3 class="t-location-title">Место получения</h3>
+                        <span>Почта России</span> <br>
+                        <span>по адресу: г. Москва, ул. Южнобутовская, 29</span>
+                        <div class="t-map">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGRRmzA7On2NzeN28cy2ULhkETtrgJcFY&callback=initMap"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+.t-section {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 900;
+}
+.t-section h3.t-location-title, .t-location-date__number {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
+    color: #000000;
+}
+.t-location-status__time, .t-location-name, .t-location-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #484848;
+}
+.t-location-name {
+    font-weight: 600;
+    color: #000;
+}
+.t-location-description {
+    color: #000;
+}
+.t-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.t-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.t-location {
+    width: 100%;
+    background: #ECF0F5;
+    box-sizing: border-box;
+    padding: 30px 0;
+}
+.t-location-box {
+    width: 100%;
+    max-width: 360px;
+    margin-left: 30%;
+}
+.t-location-status {
+    margin-top: 32px;
+}
+.t-details {
+    width: 100%;
+    max-width: 595px;
+    padding: 30px 0;
+}
+.t-location-date__number {
+    color: #FF3333;
+}
+.t-location_indent {
+    margin-top: 52px;
+}
+.t-track {
+    margin-top: 16px;
+}
+.t-track__order {
+    margin-top: 6px;
+}
+.t-track_width {
+    display: inline-block;
+    width: 170px;
+}
+.t-level {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+.t-level-line {
+    margin-right: 15px;
+}
+.t-level-box {
+    width: 100%;
+}
+.t-level-box__item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    padding: 24px 32px;
+    margin-top: 31px;
+    width: 100%;
+    max-width: 324px;
+}
+.t-level-box__item:first-child {
+    margin-top: 0;
+}
+.t-level__heading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+}
+.t-level__description {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #7A7A7A;
+    padding-top: 5px;
+}
+.t-color span {
+    color: #B7B7B7;
+}
+.t-notification-name {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.t-notification__form {
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.t-notification__input {
+    width: 100%;
+    max-width: 220px;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+}
+.t-location-btn {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+    background: #FF3333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+.t-location-btn:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+.t-location-btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5);
+    outline: 0;
+}
+.t-notification__btn {
+    padding: 13px 16px;
+}
+.t-notification__input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+.t-notification__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.9;
+}
+.t-details {
+    padding-left: 5%;
+}
+.t-order {
+
+}
+
+.t-order__sender {
+    margin-top: 10px;
+}
+.t-order__sent {
+    margin-top: 6px;
+}
+.t-order__quest {
+    margin-top: 15px;
+}
+.t-order__btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.t-receipt__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.t-receipt__column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: center;
+    width: 200px;
+}
+
+.t-receipt__column:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 33px;
+    width: 48px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.t-receipt__column:last-child:after {
+    display: none;
+}
+.t-receipt_left {
+    margin-left: -16px;
+}
+.t-receipt__text {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+#map {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+}

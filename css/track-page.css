@@ -377,6 +377,9 @@
     .t-location {
         max-width: 420px;
     }
+    .t-location_indent {
+        margin-top: 42px;
+    }
 }
 @media (max-width: 900px) {
     .t-details {
@@ -403,7 +406,7 @@
     .t-location, .t-details, .t-advertising {
         max-width: 100%;
         margin-left: 0;
-        padding: 20px;
+        padding: 40px 20px;
     }
     .t-location-box, .t-details-box, .t-advertising-box {
         max-width: 390px;

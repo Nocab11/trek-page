@@ -377,9 +377,13 @@
 
 }
 @media (max-width: 767px) {
+    .t-container {
+        padding: 0;
+    }
     .t-location, .t-details, .t-advertising {
         max-width: 100%;
         margin-left: 0;
+        padding: 20px;
     }
     .t-location-box, .t-details-box, .t-advertising-box {
         max-width: 390px;
@@ -391,14 +395,12 @@
     .t-details {
         order: 0;
     }
+    .t-receipt__column:after {
+        display: none;
+    }
 }
 @media (max-width: 480px) {
-    .t-container {
-        padding: 0;
-    }
-    .t-location, .t-details, .t-advertising {
-       padding: 20px;
-    }
+
     .t-track_width {
         width: 120px;
     }

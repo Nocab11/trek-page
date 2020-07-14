@@ -228,8 +228,20 @@
     text-align: center;
     color: #000000;
 }
+.t-place__name {
+    display: inline-block;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+}
+.t-place__adress {
+    font-weight: normal;
+}
 #map {
+    margin-top: 20px;
     width: 100%;
-    max-width: 400px;
-    height: 400px;
+    max-width: 407px;
+    height: 304px;
 }

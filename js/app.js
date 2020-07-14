@@ -4,7 +4,7 @@
 function initMap() {
     // The location of Uluru
     var geocoder = new google.maps.Geocoder();
-    var uluru = {lat: 55.7498598, lng: 37.352323};
+    var uluru = {lat: 55.711655, lng: 37.581496};
     // The map, centered at Uluru
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
@@ -30,3 +30,13 @@ function initMap() {
     // });
 
 }
+
+function tooltipHandler () {
+    let toolTip = document.querySelector('.js-t-tooltip');
+    toolTip.addEventListener('click', function () {
+        let toolTipBlock = document.querySelector('.t-tooltip-block');
+        toolTipBlock.classList.toggle('t-tooltip_hidden');
+
+    });
+}
+tooltipHandler();

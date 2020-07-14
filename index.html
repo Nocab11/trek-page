@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charSet="utf-8"/>
+    <meta  content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>Title</title>
     <link rel="stylesheet" href="./css/track-page.css">
     <link rel="stylesheet" href="./css/reset.css">
@@ -36,7 +38,7 @@
                             </div>
                             <div class="t-level">
                                 <div class="t-level-line">
-                                    <img class="" src="./images/line-large.png" alt="">
+                                    <img class="" src="images/line-status-5.png" alt="">
                                     <!-- Менять в зависимости от статуса -->
 <!--                                    <img class="" src="./images/line-status-1.png" alt="">-->
 <!--                                    <img class="" src="./images/line-status-2.png" alt="">-->
@@ -72,8 +74,8 @@
                                 <h3 class="t-location-title">Подписаться на уведомления</h3>
                                 <span class="t-notification-name t-location-name">Отправим сообщение, когда статус заказа изменится.</span>
                                 <form action="" class="t-notification__form">
-                                    <input type="text" class="t-notification__input" placeholder="Электронная почта">
-                                    <input type="button" class="t-location-btn t-notification__btn" value="Подписаться">
+                                    <input type="email" class="t-notification__email" placeholder="Электронная почта">
+                                    <input type="submit" class="t-location-btn t-notification__btn" value="Подписаться">
                                 </form>
                                 <div class="t-notification__text">
                                 <span class="t-notification-name">Оформляя подписку, высоглашаетесь с <a href="#">правилами сервиса</a> и <a
@@ -92,56 +94,97 @@
 
 
                 <div class="t-details">
-                    <div class="t-order">
-                        <h3 class="t-location-title">Подробности заказа</h3>
-                        <div class="t-order__sender">
-                            <span class="t-location-name t-track_width">Отправитель</span>
-                            <span class="t-location-description">ShopToDrop</span>
-                        </div>
-                        <div class="t-order__sent">
-                            <span class="t-location-name t-track_width">Что отправлено</span>
-                            <span class="t-location-description">Маленький пакет</span>
-                        </div>
-                        <div class="t-order__sent">
-                            <span class="t-location-name t-track_width">Вес посылки</span>
-                            <span class="t-location-description">0,159 кг</span>
-                        </div>
-                        <div class="t-order__sent">
-                            <span class="t-location-name t-track_width">К оплате</span>
-                            <span class="t-location-description">1 530 ₽</span>
-                        </div>
-                        <div class="t-order__quest">
-                            <span class="t-location-name">Остались вопросы о заказе?</span> <br>
-                            <span class="t-location-description">Оператор уточнит информацию и предоставит контакты магазина.</span>
-                            <a href="#" class="t-location-btn t-order__btn">Связаться с магазином</a>
-                        </div>
-                    </div>
-                    <div class="t-receipt t-location_indent">
-                        <h3 class="t-location-title">Как получить</h3>
-                        <div class="t-receipt__info">
-                            <div class="t-receipt__column">
-                                <img src="images/icon-passport.png" alt="">
-                                <span class="t-receipt__text">Возьмите <br> паспорт</span>
+                    <div class="t-details-box">
+                        <div class="t-order">
+                            <h3 class="t-location-title">Подробности заказа</h3>
+                            <div class="t-order__sender">
+                                <span class="t-location-name t-track_width">Отправитель</span>
+                                <span class="t-location-description">ShopToDrop</span>
                             </div>
-                            <div class="t-receipt__column">
-                                <img src="images/icon-notice.png" alt="">
-                                <span class="t-receipt__text t-receipt_left"><a href="#">Распечатайте</a><br>извещение</span>
+                            <div class="t-order__sent">
+                                <span class="t-location-name t-track_width">Что отправлено</span>
+                                <span class="t-location-description">Маленький пакет</span>
                             </div>
-                            <div class="t-receipt__column">
-                                <img src="images/icon-package.png" alt="">
-                                <span class="t-receipt__text">Оплатите <br> посылку</span>
+                            <div class="t-order__sent">
+                                <span class="t-location-name t-track_width">Вес посылки</span>
+                                <span class="t-location-description">0,159 кг</span>
+                            </div>
+                            <div class="t-order__sent">
+                                <div class="t-order__tooltip t-track_width">
+                                    <span class="t-location-name ">К оплате</span>
+                                    <span class="t-tooltip js-t-tooltip"></span>
+                                    <div class="t-tooltip-block t-tooltip_hidden">
+                                        <div class="t-tooltip__line">
+                                            <span class="t-location-name t-track_width">Стоимость заказа</span>
+                                            <span class="t-location-description">1 500 ₽</span>
+                                        </div>
+                                        <div class="t-tooltip__line">
+                                            <span class="t-location-name t-track_width">Коммисия почты</span>
+                                            <span class="t-location-description">30 ₽ </span>
+                                        </div>
+                                        <div class="t-tooltip__line t-tooltip__total">
+                                            <span class="t-location-name t-track_width">Итого к оплате</span>
+                                            <span class="t-location-description">1 530 ₽ </span>
+                                        </div>
+                                        <span class="t-tooltip__text">Размер коммисии зависит от региона. <br> <a href="#">Подробнее.</a></span>
+                                    </div>
+                                </div>
+                                <span class="t-location-description">1 530 ₽</span>
+                            </div>
+                            <div class="t-order__quest">
+                                <span class="t-location-name t-order-name">Остались вопросы о заказе?</span>
+                                <span class="t-location-description t-order-description">Оператор уточнит информацию и предоставит контакты магазина.</span>
+                                <a href="#" class="t-location-btn t-order__btn">Связаться с магазином</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="t-place t-location_indent">
-                        <h3 class="t-location-title">Место получения</h3>
-                        <span class="t-place__name">Почта России</span> <br>
-                        <span class="t-place__adress">по адресу: г. Москва, ул. Южнобутовская, 29</span>
-                        <div class="t-map">
-                            <div id="map"></div>
+                        <div class="t-receipt t-location_indent">
+                            <h3 class="t-location-title">Как получить</h3>
+                            <div class="t-receipt__info">
+                                <div class="t-receipt__column">
+                                    <img src="images/icon-passport.png" alt="">
+                                    <span class="t-receipt__text">Возьмите <br> паспорт</span>
+                                </div>
+                                <div class="t-receipt__column">
+                                    <img src="images/icon-notice.png" alt="">
+                                    <span class="t-receipt__text t-receipt_left"><a href="#">Распечатайте</a><br>извещение</span>
+                                </div>
+                                <div class="t-receipt__column">
+                                    <img src="images/icon-package.png" alt="">
+                                    <span class="t-receipt__text">Оплатите <br> посылку</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t-place t-location_indent">
+                            <h3 class="t-location-title">Место получения</h3>
+                            <span class="t-place__name">Почта России</span> <br>
+                            <span class="t-place__adress">по адресу: г. Москва, ул. Южнобутовская, 29</span>
+                            <div class="t-map">
+                                <div id="map"></div>
+                                <div class="t-schedule">
+                                    <div class="t-schedule__work">
+                                        <span class="t-location-name">График работы:</span>
+                                        <span class="t-location-description">пн-пт 10:00 - 20:00</span>
+                                        <span class="t-location-description">сб-вс 10:00 - 16:00</span>
+                                    </div>
+                                    <div class="t-schedule__tel">
+                                        <span class="t-location-name">Телефон для связи:</span>
+                                        <span class="t-location-description">8-499-390-58-53</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="t-advertising">
+                    <div class="t-advertising-box">
+                        <img src="images/bnr-large.png" alt="">
+                    </div>
+                    <div class="t-advertising-box">
+                        <img src="images/bnr-small.png" alt="">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

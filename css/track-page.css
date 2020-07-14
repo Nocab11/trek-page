@@ -1,27 +1,27 @@
 .t-section {
     font-family: 'Source Sans Pro';
     font-style: normal;
-    font-weight: 900;
+    font-weight: 400;
 }
-.t-section h3.t-location-title, .t-location-date__number {
+.t-section h3.t-main-title, .t-location-date__number {
     font-style: normal;
     font-weight: bold;
     font-size: 26px;
     line-height: 33px;
     color: #000000;
 }
-.t-location-status__time, .t-location-name, .t-location-description {
+.t-location-status__time, .t-main-name, .t-main-description {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     color: #484848;
 }
-.t-location-name {
+.t-main-name {
     font-weight: 600;
     color: #000;
 }
-.t-location-description {
+.t-main-description {
     color: #000;
 }
 .t-container {
@@ -190,7 +190,6 @@
     cursor: pointer;
 }
 .t-tooltip-block {
-
     position: absolute;
     width: 290px;
     background: #fff;
@@ -254,7 +253,6 @@
     align-items: baseline;
     text-align: center;
 }
-
 .t-receipt__column:after {
     content: '';
     display: block;
@@ -359,22 +357,19 @@
 }
 @media (max-width: 991px) {
     .t-details {
-        /*order: 2;*/
         margin-left: 10px;
     }
     .t-location {
         max-width: 420px;
     }
-
 }
-@media (max-width: 891px) {
+@media (max-width: 900px) {
     .t-details {
         order: 2;
     }
     .t-location {
         max-width: 380px;
     }
-
 }
 @media (max-width: 767px) {
     .t-container {
@@ -400,8 +395,25 @@
     }
 }
 @media (max-width: 480px) {
-
     .t-track_width {
         width: 120px;
+    }
+    .t-schedule {
+        display: block;
+        position: absolute;
+        top: 160px;
+        left: 6px;
+        width: 163px;
+        padding: 6px 10px 5px 7px;
+        background: #fff;
+    }
+    .t-schedule__tel {
+        margin-top: 0;
+    }
+}
+@media (max-width: 320px) {
+    .t-advertising-img img {
+        width: 100%;
+        max-width: 280px;
     }
 }

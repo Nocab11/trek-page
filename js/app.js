@@ -1,6 +1,4 @@
-
 // Инициализация гугл карты
-
 function initMap() {
     // The location of Uluru
     var geocoder = new google.maps.Geocoder();
@@ -28,15 +26,14 @@ function initMap() {
     //         document.getElementById('map').style.display = 'none';
     //     }
     // });
-
 }
 
+// Открытие тултипа
 function tooltipHandler () {
     let toolTip = document.querySelector('.js-t-tooltip');
     toolTip.addEventListener('click', function () {
-        let toolTipBlock = document.querySelector('.t-tooltip-block');
-        toolTipBlock.classList.toggle('t-tooltip_hidden');
-
+        document.querySelector('.t-tooltip-block').classList.toggle('t-tooltip_hidden');
     });
 }
+
 tooltipHandler();

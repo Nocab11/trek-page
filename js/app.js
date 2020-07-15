@@ -26,6 +26,20 @@ function initMap() {
     //         document.getElementById('map').style.display = 'none';
     //     }
     // });
+    var infoWnd = new google.maps.InfoWindow({
+        content: `               
+                    <div class="t-schedule__work">
+                        <span class="t-main-name">График работы:</span>
+                        <span class="t-main-description">пн-пт 10:00 - 20:00</span>
+                        <span class="t-main-description">сб-вс 10:00 - 16:00</span>
+                    </div>
+                     <div class="t-schedule__tel">
+                        <span class="t-main-name">Телефон для связи:</span>
+                        <span class="t-main-description">8-499-390-58-53</span>
+                    </div>                    
+                `,
+    });
+    infoWnd.open(map, marker);
 }
 
 // Открытие тултипа

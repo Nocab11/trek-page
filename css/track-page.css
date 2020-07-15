@@ -285,11 +285,18 @@
     top: 35px;
     left: 93px;
     width: 48px;
-    height: 2px;
+    height: 1px;
     background: rgba(0, 0, 0, 0.5);
 }
 .t-receipt__column:last-child:after {
     display: none;
+}
+.t-receipt__column:last-child {
+    margin-left: -8px;
+}
+.t-receipt__two {
+    width: 100%;
+    max-width: 250px;
 }
 .t-receipt_left {
     margin-left: -16px;
@@ -432,7 +439,7 @@
     .t-location, .t-details, .t-advertising {
         max-width: 100%;
         margin-left: 0;
-        padding: 40px 20px;
+        padding: 40px 20px 25px;
     }
     .t-location-box, .t-details-box, .t-advertising-box {
         max-width: 390px;
@@ -445,12 +452,45 @@
         order: 0;
     }
     .t-receipt__column:after {
-        display: none;
+        left: 82px;
+        width: 37px;
     }
 }
 @media (max-width: 480px) {
+    .t-section h3.t-main-title, .t-location-date__number {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .t-location-status {
+        margin-top: 16px;
+    }
+    .t-location-status__time {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .t-level-box__item {
+        padding: 16px 24px;
+        margin-top: 20px;
+    }
+    .t-level-line__img_height.t-level-line__three-img_height {
+        height: 495px;
+    }
+    .t-level-line__img_height {
+        height: 355px;
+    }
+    .t-notification__email {
+        padding: 8px 16px;
+    }
+    .t-notification__btn {
+        padding: 8px 16px;
+        font-size: 16px;
+        line-height: 18px;
+    }
     .t-track_width {
         width: 120px;
+    }
+    .t-tooltip-block .t-main-name, .t-tooltip-block .t-main-description {
+        font-size: 14px;
     }
     .t-schedule {
         display: block;
@@ -468,10 +508,23 @@
         left: -40px !important;
         max-width: 182px !important;
     }
+    .t-advertising {
+        display: none;
+    }
+
+}
+@media (max-width: 360px) {
+    .t-tooltip-block {
+        width: 260px;
+    }
 }
 @media (max-width: 320px) {
     .t-advertising-img img {
         width: 100%;
         max-width: 280px;
+    }
+    .t-receipt__column:after {
+        left: 79px;
+        width: 16px;
     }
 }

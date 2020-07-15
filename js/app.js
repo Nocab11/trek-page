@@ -45,10 +45,21 @@ function initMap() {
 
 // Открытие тултипа
 function tooltipHandler () {
+
     let toolTip = document.querySelector('.js-t-tooltip');
+
+    let toolTipBlock = document.querySelector('.t-tooltip-block');
+
     toolTip.addEventListener('click', function () {
-        document.querySelector('.t-tooltip-block').classList.toggle('t-tooltip_hidden');
+        toolTipBlock.classList.toggle('t-tooltip_hidden');
     });
+
+    document.addEventListener('click', function (e) {
+        if (!toolTip.contains(e.target) && !toolTipBlock.contains(e.target)) {
+            toolTipBlock.classList.add('t-tooltip_hidden');
+        }
+    });
+
 }
 
 tooltipHandler();

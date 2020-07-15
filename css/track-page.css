@@ -298,6 +298,7 @@
     max-width: 407px;
     height: 330px;
 }
+
 .t-schedule {
     display: block;
     position: absolute;
@@ -437,6 +438,10 @@
     }
     .t-schedule__tel {
         margin-top: 0;
+    }
+    .gm-style .gm-style-iw-c {
+        left: -40px !important;
+        max-width: 182px !important;
     }
 }
 @media (max-width: 320px) {

@@ -57,8 +57,8 @@
     font-size: 14px;
     text-decoration: none;
     margin-top: 7px;
-    color: #2d2b2b;
-    border-bottom: 1px solid #2d2b2b;
+    color: #000;
+    border-bottom: 1px solid #000;
 }
 
 .t-location-date__number {

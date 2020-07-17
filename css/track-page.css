@@ -52,7 +52,17 @@
     margin-top: 32px;
 }
 
+.t-location-date__link {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 7px;
+    color: #2d2b2b;
+    border-bottom: 1px solid #2d2b2b;
+}
+
 .t-location-date__number {
+    display: block;
     color: #FF3333;
 }
 .t-location_indent {

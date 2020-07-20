@@ -631,7 +631,23 @@
 }
 
 @media print {
-    .t-advertising {
+    .t-advertising, .t-location-date .t-location-date__link, .t-notification, .t-order__quest {
         display: none;
+    }
+    .t-location-status {
+        margin-top: 10px;
+    }
+    .t-level-box__item {
+        padding: 10px 18px;
+        margin-top: 20px;
+    }
+    .t-level-line__img_height.t-level-line__three-img_height {
+        height: 412px;
+    }
+    .t-level-line__img_height {
+        height: 290px;
+    }
+    .t-place {
+        margin-top: 70px;
     }
 }

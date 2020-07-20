@@ -629,3 +629,9 @@
         width: 16px;
     }
 }
+
+@media print{
+    .t-advertising {
+        display: none;
+    }
+}

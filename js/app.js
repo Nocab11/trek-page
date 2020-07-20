@@ -2,7 +2,7 @@
 function initMap() {
     // The location of Uluru
     let geocoder = new google.maps.Geocoder();
-    let uluru = {lat: 55.539562, lng: 37.537119};
+    let uluru = {lat: 55.543684, lng: 37.525328};
     // The map, centered at Uluru
     let map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,

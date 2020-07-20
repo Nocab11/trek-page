@@ -631,7 +631,7 @@
 }
 
 @media print {
-    .t-advertising, .t-location-date .t-location-date__link, .t-notification, .t-order__quest {
+    .t-advertising {
         display: none;
     }
     .t-location-status {
@@ -647,7 +647,8 @@
     .t-level-line__img_height {
         height: 290px;
     }
-    .t-place {
-        margin-top: 70px;
+
+    .t-content {
+        flex-wrap: nowrap;
     }
 }

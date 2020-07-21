@@ -54,7 +54,6 @@
 .t-location-status {
     margin-top: 32px;
 }
-
 .t-location-date__link {
     display: inline-block;
     font-size: 14px;
@@ -63,7 +62,9 @@
     color: #000;
     border-bottom: 1px solid #000;
 }
-
+.t-status-title {
+    line-height: 26px;
+}
 .t-location-date__number {
     display: block;
     color: #FF3333;
